@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hi there!
+          Go is better than JavaScript
         </p>
         <a
           className="App-link"
