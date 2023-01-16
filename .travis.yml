@@ -8,3 +8,15 @@ before_install:
 
 script:
   - docker run -e CI=true gusparr28/supreme-memory npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "supreme-memory"
+  env: "Supremememory-env"
+  bucket_name: "elasticbeanstalk-us-east-1-511709942454"
+  bucket_path: "supreme-memory"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: "$AWS_SECRET_KEY"
